@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="870.0" minWidth="1280.0" prefHeight="870.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rummy.BoardController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#833708" height="120.0" layoutY="756.0" opacity="0.72" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#833708" height="120.0" layoutX="-7.0" layoutY="639.0" opacity="0.72" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1288.0" />
+   <Line endX="1165.0" layoutX="115.0" layoutY="641.0" startX="-115.0" />
+   <Text layoutX="68.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your tiles">
+      <font>
+         <Font size="46.0" />
+      </font>
+   </Text>
+   <VBox layoutX="18.0" layoutY="655.0" prefHeight="236.0" prefWidth="1250.0" spacing="10.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="655.0">
+      <HBox fx:id="HboxUp" prefHeight="100.0" prefWidth="200.0" spacing="20.0" />
+      <HBox fx:id="HboxDown" prefHeight="100.0" prefWidth="200.0" spacing="20.0" />
+   </VBox>
+</AnchorPane>

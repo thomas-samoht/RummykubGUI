@@ -1,0 +1,19 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(æÍÑ«8ø©”ö/
+f
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(™­†æ
+k
+java:S1149C"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(îê²úÿÿÿÿ
+†
+java:S13192"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Û™¦—
+M	java:S1069"9Replace this use of System.out or System.err by a logger.(Øˆ»^
+f
+java:S1149A"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(”Ôß
+a
+java:S11927"FDefine a constant instead of duplicating this literal "Black" 3 times.(ÂÙşîúÿÿÿÿ
+k
+java:S11496"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(‰Ÿşóùÿÿÿÿ
+^
+java:S1854"BRemove this useless assignment to local variable "startingPlayer".(’²ô^8Øßˆö/
+O
+java:S1481"3Remove this unused "startingPlayer" local variable.(’²ô^8Øßˆö/
