@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -32,17 +34,38 @@ public class BoardController implements Initializable {
         generateGame();
     }
 
+    public static List[] split(List<Tile> list)
+    {
+        List<Tile> first = new ArrayList<>();
+        List<Tile> second = new ArrayList<>();
+        int size = list.size();
+        for (int i = 0; i < size / 2; i++)
+            first.add(list.get(i));
+        for (int i = size / 2; i < size; i++)
+            second.add(list.get(i));
+        return new List[] { first, second };
+    }
+
     @FXML
     public void generateFXMLPlate(Player player){
-        for (Tile tile: player.plate.getTiles()) {
+        List<Tile> tiles = player.plate.getTiles();
+        List[] split = split(tiles);
+
+        for (Object tile: split[0]) {
             ObservableList<Node> list =  HboxUp.getChildren();
-            Text text = new Text();
-            text.setText(String.valueOf(tile.number));
-            text.setFill(tile.color);
-            text.setTextAlignment(TextAlignment.CENTER);
-            text.setStyle("-fx-font: 40 arial;");
-            list.add(text);
+            TileFXML tileFXML = new TileFXML((Tile) tile);
+            list.add(tileFXML.tileToPane());
         }
+        for (Object tile: split[1]) {
+            ObservableList<Node> list =  HboxDown.getChildren();
+            TileFXML tileFXML = new TileFXML((Tile) tile);
+            list.add(tileFXML.tileToPane());
+        }
+    }
+
+    @FXML
+    public void dragDetect(){
+
     }
 
     public ArrayList<Player> generatePlayers(){
